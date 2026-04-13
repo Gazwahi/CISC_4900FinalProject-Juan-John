@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Burial & Cremation | Funeraria Juan-John Funeral Home</title>
+    <title>Grief Support | Funeraria Juan-John Funeral Home</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,31 +14,37 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      .font-heading {
+        font-family: "Cormorant Garamond", serif;
+      }
+    </style>
   </head>
 
-  <body class="min-h-screen flex flex-col font-body bg-[#f8f6f1]">
+  <body class="min-h-screen flex flex-col bg-[#f8f6f1] text-[#1a252f]">
     <!-- Navbar -->
     <nav class="sticky top-0 z-50 w-full px-6 py-4 shadow-lg bg-[#1a252f]">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
         <div class="flex items-center gap-3">
-          <div class="flex items-center gap-3">
-            <img
-              src="imgs/favicon.png"
-              alt="Logo"
-              class="w-10 h-10 object-contain"
-            />
+          <img
+            src="imgs/favicon.png"
+            alt="Logo"
+            class="w-10 h-10 object-contain"
+          />
 
-            <a href="index.html" class="font-heading text-xl text-[#f5f5f0]">
-              Funeraria Juan-John Funeral Home
-            </a>
-          </div>
+          <a href="index.html" class="font-heading text-xl text-[#f5f5f0]">
+            Funeraria Juan-John Funeral Home
+          </a>
         </div>
 
         <div class="hidden md:flex gap-8 text-[#f5f5f0] items-center">
           <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
-          <a href="services.html" class="text-[#d4af37] font-medium"
+          <a href="services.html" class="hover:text-[#d4af37] transition"
             >Services</a
           >
           <a href="contact.html" class="hover:text-[#d4af37] transition"
@@ -63,8 +69,9 @@
         class="hidden md:hidden flex flex-col gap-4 mt-4 text-[#f5f5f0]"
       >
         <a href="index.html" class="hover:text-[#d4af37]">Home</a>
-        <a href="services.html" class="text-[#d4af37]">Services</a>
+        <a href="services.html" class="hover:text-[#d4af37]">Services</a>
         <a href="contact.html" class="hover:text-[#d4af37]">Contact</a>
+        <a href="tel:7188271515" class="hover:text-[#d4af37]">Call Now</a>
       </div>
     </nav>
 
@@ -72,25 +79,28 @@
       <!-- Hero Image -->
       <section class="relative h-[60vh] min-h-[420px]">
         <img
-          src="imgs/burial.png"
-          alt="Burial & Cremation"
+          src="imgs/grief.png"
+          alt="Grief Support"
           class="w-full h-full object-cover"
         />
+
         <div
           class="absolute inset-0 bg-black/50 flex items-center justify-center"
         >
           <div class="text-center px-6">
             <p class="uppercase tracking-[0.2em] text-[#d4af37] text-sm mb-4">
-              Compassionate Guidance
+              Support & Healing
             </p>
+
             <h1 class="font-heading text-5xl md:text-6xl text-white mb-4">
-              Burial & Cremation Services
+              Grief Support
             </h1>
+
             <p
               class="text-[#f5f5f0] text-lg md:text-xl max-w-2xl mx-auto leading-8"
             >
-              Respectful burial and cremation services tailored to your family's
-              wishes, traditions and needs
+              Compassionate resources and guidance to help you and your family
+              navigate loss and begin the healing process.
             </p>
           </div>
         </div>
@@ -103,18 +113,20 @@
         >
           <div>
             <h2 class="font-heading text-4xl text-[#1a252f] mb-4">
-              Honoring Every Life with Care
+              You Are Not Alone
             </h2>
+
             <p class="text-[#4b5563] text-lg leading-8 mb-6">
-              We understand that every family has different preferences,
-              traditions, and needs. Our team provides thoughtful guidance to
-              help you choose between burial and cremation options with clarity
-              and compassion.
+              Grieving the loss of a loved one is a deeply personal experience.
+              Everyone processes grief differently, and there is no single
+              “right way” to move through it.
             </p>
+
             <p class="text-[#4b5563] text-lg leading-8">
-              Whether you are arranging a traditional funeral, a simple
-              cremation, or a personalized memorial service, we are here to
-              support you through every step.
+              Our goal is to provide support, comfort, and helpful resources
+              during this difficult time. Whether you need guidance, someone to
+              talk to, or direction toward professional support, we are here to
+              help.
             </p>
           </div>
 
@@ -123,148 +135,135 @@
               <h3 class="font-heading text-2xl text-[#1a252f] mb-4">
                 We Can Help With:
               </h3>
-              <div class="space-y-4">
-                <div class="flex gap-3">
-                  <span class="text-[#d4af37]">✔</span>
-                  <p class="text-[#4b5563]">Traditional burial arrangements</p>
-                </div>
-                <div class="flex gap-3">
-                  <span class="text-[#d4af37]">✔</span>
-                  <p class="text-[#4b5563]">
-                    Cremation planning and coordination
-                  </p>
-                </div>
-                <div class="flex gap-3">
-                  <span class="text-[#d4af37]">✔</span>
-                  <p class="text-[#4b5563]">Memorial and visitation services</p>
-                </div>
-                <div class="flex gap-3">
-                  <span class="text-[#d4af37]">✔</span>
-                  <p class="text-[#4b5563]">Personalized service options</p>
-                </div>
-                <div class="flex gap-3">
-                  <span class="text-[#d4af37]">✔</span>
-                  <p class="text-[#4b5563]">
-                    Guidance with paperwork and next steps
-                  </p>
-                </div>
+
+              <div class="space-y-4 text-[#4b5563] text-lg">
+                <p>✔ Connecting you with grief support resources</p>
+                <p>✔ Guidance through emotional and practical next steps</p>
+                <p>✔ Providing a supportive and understanding environment</p>
+                <p>✔ Answering questions during difficult moments</p>
+                <p>✔ Helping families stay informed and supported</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Service Options -->
+      <!-- Support Options -->
       <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-          <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="text-center mb-12 max-w-3xl mx-auto">
             <h2 class="font-heading text-4xl text-[#1a252f] mb-4">
-              Service Options
+              Grief Support Resources
             </h2>
+
             <p class="text-[#4b5563] text-lg leading-8">
-              We offer a range of respectful options so families can choose what
-              best reflects their needs and wishes.
+              There are many ways to find support and healing. These options can
+              help you or your family through the grieving process.
             </p>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-[#f8f6f1] rounded-2xl shadow-md p-8 text-center">
-              <span class="text-4xl mb-4 block">⚰️</span>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div
+              class="bg-[#f8f6f1] p-8 rounded-2xl shadow-md hover:shadow-xl transition text-center"
+            >
+              <span class="text-4xl mb-4 block">🧠</span>
               <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
-                Traditional Burial
+                Counseling
               </h3>
               <p class="text-[#4b5563] leading-7">
-                Full-service burial options with visitation, ceremony, and
-                graveside support.
+                Professional grief counseling can help process emotions and
+                provide healthy coping strategies.
               </p>
             </div>
 
-            <div class="bg-[#f8f6f1] rounded-2xl shadow-md p-8 text-center">
-              <span class="text-4xl mb-4 block">🔥</span>
+            <div
+              class="bg-[#f8f6f1] p-8 rounded-2xl shadow-md hover:shadow-xl transition text-center"
+            >
+              <span class="text-4xl mb-4 block">🤝</span>
               <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
-                Cremation Services
+                Support Groups
               </h3>
               <p class="text-[#4b5563] leading-7">
-                Simple or personalized cremation options handled with dignity
-                and care.
+                Connect with others who understand your experience and share
+                support in a safe and caring space.
               </p>
             </div>
 
-            <div class="bg-[#f8f6f1] rounded-2xl shadow-md p-8 text-center">
-              <span class="text-4xl mb-4 block">🕊️</span>
+            <div
+              class="bg-[#f8f6f1] p-8 rounded-2xl shadow-md hover:shadow-xl transition text-center"
+            >
+              <span class="text-4xl mb-4 block">📖</span>
               <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
-                Memorial Services
+                Resources
               </h3>
               <p class="text-[#4b5563] leading-7">
-                Meaningful memorial gatherings to celebrate and honor a loved
-                one’s life.
+                Books, articles, and guidance materials to help you better
+                understand grief and healing.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- What Families Can Expect -->
+      <!-- Additional Support Section -->
       <section class="py-20">
         <div class="max-w-5xl mx-auto px-6 text-center">
           <h2 class="font-heading text-4xl text-[#1a252f] mb-6">
-            What Families Can Expect
+            Taking the Next Step
           </h2>
+
           <p class="text-[#4b5563] text-lg leading-8 mb-10">
-            Our role is to make the process clearer, more respectful, and less
-            overwhelming. We are committed to serving each family with patience,
-            professionalism, and compassion.
+            Healing takes time, and support can make a meaningful difference.
+            Reaching out for help is a sign of strength, not weakness.
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="grid md:grid-cols-3 gap-6 text-left">
             <div class="bg-white rounded-2xl shadow-md p-6">
-              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
-                Guidance
-              </h3>
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">Listen</h3>
               <p class="text-[#4b5563] leading-7">
-                Clear support and explanation through each decision and
-                arrangement.
+                Give yourself space to feel and acknowledge your grief without
+                pressure.
               </p>
             </div>
 
             <div class="bg-white rounded-2xl shadow-md p-6">
-              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">Respect</h3>
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">Connect</h3>
               <p class="text-[#4b5563] leading-7">
-                Every service is handled with dignity and care for your loved
-                one and family.
+                Stay close to family, friends, faith communities, or support
+                groups.
               </p>
             </div>
 
             <div class="bg-white rounded-2xl shadow-md p-6">
-              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
-                Flexibility
-              </h3>
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">Heal</h3>
               <p class="text-[#4b5563] leading-7">
-                Options that can be personalized to reflect your wishes,
-                traditions, and budget.
+                Move forward gently, one step at a time, with the support you
+                need.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CTA Band -->
-      <section class="py-16 bg-[#1a252f]">
-        <div class="max-w-4xl mx-auto px-6 text-center">
+      <!-- CTA -->
+      <section class="py-16 bg-[#1a252f] text-center">
+        <div class="max-w-3xl mx-auto px-6">
           <h2 class="font-heading text-4xl text-[#f5f5f0] mb-4">
-            Need help choosing the right service?
+            Need someone to talk to?
           </h2>
+
           <p class="text-[#d1d5db] text-lg leading-8 mb-8">
-            Our team is here to answer your questions and help you make the best
-            decision for your family.
+            Our team is here to support you and guide you through this time.
           </p>
+
           <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a
               href="contact.html"
-              class="bg-[#d4af37] text-[#1a252f] px-8 py-3 rounded-md font-semibold shadow hover:bg-[#bfa23a] transition"
+              class="bg-[#d4af37] text-[#1a252f] px-8 py-3 rounded-md font-semibold hover:bg-[#bfa23a] transition"
             >
               Contact Us
             </a>
+
             <a
               href="tel:7188271515"
               class="border border-[#d4af37] text-[#d4af37] px-8 py-3 rounded-md font-semibold hover:bg-[#d4af37] hover:text-[#1a252f] transition"
@@ -277,16 +276,24 @@
     </main>
 
     <footer class="py-8 px-6 text-center bg-[#111827]">
-      <p class="font-heading text-xl mb-2 text-[#f5f5f0]">
-        <a href="index.html">Funeraria Juan-John Funeral Services</a>
+      <p class="font-heading text-xl text-[#f5f5f0] mb-2">
+        Funeraria Juan-John Funeral Services
       </p>
-
       <p class="text-[#a0aec0]">
         © 2026 All Rights Reserved. Serving families with dignity and
         compassion.
       </p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
   </body>
 </html>

@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Funeraria Juan-John Funeral Home</title>
+    <title>Memorial Services | Funeraria Juan-John Funeral Home</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -16,28 +14,53 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+      }
+
+      .font-heading {
+        font-family: "Cormorant Garamond", serif;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
   </head>
 
-  <body class="min-h-screen flex flex-col font-body">
+  <body class="min-h-screen flex flex-col bg-[#f8f6f1] text-[#1a252f]">
+    <!-- Navbar -->
     <nav class="sticky top-0 z-50 w-full px-6 py-4 shadow-lg bg-[#1a252f]">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <!-- Logo -->
         <div class="flex items-center gap-3">
-          <a href="index.html" class="font-heading text-xl text-[#f5f5f0]">
-            Funeraria Juan-John Funeral Home
+          <div class="flex items-center gap-3">
+            <img
+              src="imgs/favicon.png"
+              alt="Logo"
+              class="w-10 h-10 object-contain"
+            />
+
+            <a href="index.html" class="font-heading text-xl text-[#f5f5f0]">
+              Funeraria Juan-John Funeral Home
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden md:flex gap-8 text-[#f5f5f0] items-center">
+          <a href="index.html" class="hover:text-[#d4af37] transition">Home</a>
+          <a href="services.html" class="text-[#d4af37] font-medium"
+            >Services</a
+          >
+          <a href="contact.html" class="hover:text-[#d4af37] transition"
+            >Contact</a
+          >
+          <a
+            href="tel:7188271515"
+            class="bg-[#d4af37] text-[#1a252f] px-5 py-2 rounded-md font-semibold hover:bg-[#bfa23a] transition"
+          >
+            Call Now
           </a>
         </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex gap-8 text-[#f5f5f0]">
-          <a href="index.html" class="hover:text-[#d4af37]">Home</a>
-          <a href="services.html" class="hover:text-[#d4af37]">Services</a>
-          <a href="about.html" class="hover:text-[#d4af37]">About</a>
-          <a href="contact.html" class="hover:text-[#d4af37]">Contact</a>
-        </div>
-
-        <!-- Hamburger Button -->
         <button id="menu-btn" class="md:hidden text-[#f5f5f0] text-2xl">
           ☰
         </button>
@@ -49,29 +72,239 @@
         class="hidden md:hidden flex flex-col gap-4 mt-4 text-[#f5f5f0]"
       >
         <a href="index.html" class="hover:text-[#d4af37]">Home</a>
-        <a href="services.html" class="hover:text-[#d4af37]">Services</a>
-        <a href="about.html" class="hover:text-[#d4af37]">About</a>
+        <a href="services.html" class="text-[#d4af37]">Services</a>
         <a href="contact.html" class="hover:text-[#d4af37]">Contact</a>
       </div>
     </nav>
 
     <main class="flex-grow">
-      <section
-        class="py-20 text-center bg-gradient-to-br from-[#2c3e50] to-[#1a252f]"
-      >
-        <h1 class="font-heading text-6xl text-[#f5f5f0]">Memorial Services</h1>
+      <!-- Hero -->
+      <section class="relative h-[60vh] min-h-[420px]">
+        <img
+          src="imgs/Memorial.png"
+          alt="Memorial Services"
+          class="w-full h-full object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-black/50 flex items-center justify-center"
+        ><div class="max-w-4xl mx-auto px-6 py-20 text-center">
+          <p class="uppercase tracking-[0.2em] text-[#d4af37] text-sm mb-4">
+            Honor and Remembrance
+          </p>
+          <h1 class="font-heading text-5xl md:text-6xl text-[#f5f5f0] mb-6">
+            Memorial Services
+          </h1>
+          <p
+            class="text-[#d1d5db] text-lg md:text-xl leading-8 max-w-3xl mx-auto"
+          >
+            Meaningful memorial services that honor life, celebrate memories,
+            and bring family and friends together.
+          </p>
+        </div>
+      </section>
 
-        <p class="text-[#d4af37] text-xl mt-4">???</p>
+      <!-- Overview -->
+      <section class="py-20">
+        <div
+          class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <h2 class="font-heading text-4xl text-[#1a252f] mb-4">
+              A Meaningful Way to Remember
+            </h2>
+            <p class="text-[#4b5563] text-lg leading-8 mb-6">
+              Memorial services give families and loved ones a chance to come
+              together, share memories, and celebrate a life well lived. These
+              services can be personalized to reflect the unique story,
+              traditions, and wishes of the person being honored.
+            </p>
+            <p class="text-[#4b5563] text-lg leading-8">
+              Whether held shortly after a passing or at a later date, a
+              memorial service can provide comfort, healing, and a meaningful
+              opportunity for remembrance.
+            </p>
+          </div>
+
+          <div>
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-4">
+                Memorial Services May Include:
+              </h3>
+              <div class="space-y-4">
+                <div class="flex gap-3">
+                  <span class="text-[#d4af37]">✔</span>
+                  <p class="text-[#4b5563]">
+                    Personalized tributes and reflections
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-[#d4af37]">✔</span>
+                  <p class="text-[#4b5563]">
+                    Music, readings, and photo displays
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-[#d4af37]">✔</span>
+                  <p class="text-[#4b5563]">Religious or cultural traditions</p>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-[#d4af37]">✔</span>
+                  <p class="text-[#4b5563]">
+                    Gatherings with family and friends
+                  </p>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-[#d4af37]">✔</span>
+                  <p class="text-[#4b5563]">
+                    Guidance with planning and coordination
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Memorial Options -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <h2 class="font-heading text-4xl text-[#1a252f] mb-4">
+              Memorial Service Options
+            </h2>
+            <p class="text-[#4b5563] text-lg leading-8">
+              We offer flexible and thoughtful ways to create a service that
+              feels personal and meaningful.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-[#f8f6f1] rounded-2xl shadow-md p-8 text-center">
+              <span class="text-4xl mb-4 block">🕊️</span>
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
+                Traditional Memorial
+              </h3>
+              <p class="text-[#4b5563] leading-7">
+                A formal gathering for family and friends to honor and remember
+                a loved one.
+              </p>
+            </div>
+
+            <div class="bg-[#f8f6f1] rounded-2xl shadow-md p-8 text-center">
+              <span class="text-4xl mb-4 block">📷</span>
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
+                Celebration of Life
+              </h3>
+              <p class="text-[#4b5563] leading-7">
+                A more personal service focused on memories, stories, music, and
+                shared moments.
+              </p>
+            </div>
+
+            <div class="bg-[#f8f6f1] rounded-2xl shadow-md p-8 text-center">
+              <span class="text-4xl mb-4 block">⛪</span>
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
+                Faith-Based Memorial
+              </h3>
+              <p class="text-[#4b5563] leading-7">
+                Services that incorporate religious traditions, prayers, and
+                spiritual elements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What Families Can Expect -->
+      <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <h2 class="font-heading text-4xl text-[#1a252f] mb-6">
+            What Families Can Expect
+          </h2>
+          <p class="text-[#4b5563] text-lg leading-8 mb-10">
+            Our goal is to make the planning process clear, supportive, and
+            respectful, while helping families create a service that truly
+            honors their loved one.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div class="bg-white rounded-2xl shadow-md p-6">
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
+                Guidance
+              </h3>
+              <p class="text-[#4b5563] leading-7">
+                Thoughtful support with planning details, service flow, and next
+                steps.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md p-6">
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">
+                Personalization
+              </h3>
+              <p class="text-[#4b5563] leading-7">
+                Flexible options to reflect personality, traditions, and family
+                preferences.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-md p-6">
+              <h3 class="font-heading text-2xl text-[#1a252f] mb-3">Care</h3>
+              <p class="text-[#4b5563] leading-7">
+                Compassionate assistance for families throughout the memorial
+                planning process.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section class="py-16 bg-[#1a252f]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="font-heading text-4xl text-[#f5f5f0] mb-4">
+            Need help planning a memorial service?
+          </h2>
+          <p class="text-[#d1d5db] text-lg leading-8 mb-8">
+            Our team is here to help you create a meaningful service with care
+            and compassion.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="contact.html"
+              class="bg-[#d4af37] text-[#1a252f] px-8 py-3 rounded-md font-semibold shadow hover:bg-[#bfa23a] transition"
+            >
+              Contact Us
+            </a>
+            <a
+              href="tel:7188271515"
+              class="border border-[#d4af37] text-[#d4af37] px-8 py-3 rounded-md font-semibold hover:bg-[#d4af37] hover:text-[#1a252f] transition"
+            >
+              Call Now
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="py-8 px-6 text-center bg-[#1a252f]">
+    <footer class="py-8 px-6 text-center bg-[#111827]">
       <p class="font-heading text-xl mb-2 text-[#f5f5f0]">
-        <a href="index.html">Funeraria Juan-John Funeral Services </a>
+        <a href="index.html">Funeraria Juan-John Funeral Services</a>
       </p>
 
-      <p class="text-[#a0aec0]">gaz</p>
+      <p class="text-[#a0aec0]">
+        © 2026 All Rights Reserved. Serving families with dignity and
+        compassion.
+      </p>
     </footer>
-    <script src="js/main.js"></script>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
