@@ -117,14 +117,35 @@
             </p>
           </div>
 
+          <div
+            id="submission-message"
+            class="hidden mb-8 rounded-md border border-[#d4af37] bg-[#fff9e6] px-6 py-4 text-center text-[#1a252f]"
+          >
+            <p class="font-heading text-2xl font-semibold">
+              Submission Received
+            </p>
+            <p class="mt-2 text-[#4b5563]">
+              Thank you. Your pre-planning information has been sent to our
+              team.
+            </p>
+          </div>
+
           <div class="bg-white rounded-2xl shadow-xl p-8 md:p-10">
-            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form
+              action="http://localhost:8080/checklist"
+              method="post"
+              class="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              <input type="hidden" name="returnUrl" id="returnUrl" />
+
               <div class="md:col-span-2">
                 <label class="font-heading text-lg mb-2 block text-[#1a252f]">
                   Name of Deceased
                 </label>
                 <input
                   type="text"
+                  name="deceasedFullName"
+                  required
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Full Name"
                 />
@@ -136,6 +157,7 @@
                 </label>
                 <input
                   type="date"
+                  name="birthDate"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                 />
               </div>
@@ -146,6 +168,7 @@
                 </label>
                 <input
                   type="text"
+                  name="birthPlace"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="City, State / Country"
                 />
@@ -157,6 +180,7 @@
                 </label>
                 <input
                   type="text"
+                  name="fatherName"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Father's Name"
                 />
@@ -164,34 +188,44 @@
 
               <div>
                 <label class="font-heading text-lg mb-2 block text-[#1a252f]">
-                  Mother's Name and Maiden Name
+                  Mother's Name
                 </label>
                 <input
                   type="text"
+                  name="motherName"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
-                  placeholder="Mother's Full Name"
+                  placeholder="Mother's Name"
                 />
               </div>
 
               <div>
                 <label class="font-heading text-lg mb-2 block text-[#1a252f]">
-                  Social Security Number
+                  Mother's Maiden Name
                 </label>
-                <div>
-                  <label class="font-heading text-lg mb-2 block text-[#1a252f]">
-                    Do you have the Social Security Number available?
-                  </label>
-                  <select
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
-                  >
-                    <option value="">Select</option>
-                    <option>Yes</option>
-                    <option>No</option>
-                  </select>
-                </div>
+                <input
+                  type="text"
+                  name="motherMaidenName"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
+                  placeholder="Mother's Maiden Name"
+                />
+              </div>
+
+              <div>
+                <label class="font-heading text-lg mb-2 block text-[#1a252f]">
+                  Do you have the Social Security Number available?
+                </label>
+                <select
+                  name="ssnAvailable"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
+                >
+                  <option value="">Select</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+
                 <p class="text-sm text-[#6b7280] mt-2">
-                  For security reasons, this information will be collected in
-                  person or by phone.
+                  For security reasons, the actual Social Security Number will
+                  be collected in person or by phone.
                 </p>
               </div>
 
@@ -200,11 +234,12 @@
                   Was the Person a Veteran?
                 </label>
                 <select
+                  name="veteran"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                 >
                   <option value="">Select</option>
-                  <option>Yes</option>
-                  <option>No</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
               </div>
 
@@ -213,11 +248,12 @@
                   Veteran Discharge Papers Available?
                 </label>
                 <select
+                  name="dischargePapersAvailable"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                 >
                   <option value="">Select</option>
-                  <option>Yes</option>
-                  <option>No</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
               </div>
 
@@ -227,6 +263,7 @@
                 </label>
                 <input
                   type="text"
+                  name="education"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Highest level completed"
                 />
@@ -238,6 +275,7 @@
                 </label>
                 <input
                   type="text"
+                  name="maritalStatus"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Marital Status"
                 />
@@ -249,6 +287,7 @@
                 </label>
                 <input
                   type="text"
+                  name="occupation"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Occupation"
                 />
@@ -260,6 +299,7 @@
                 </label>
                 <input
                   type="text"
+                  name="residence"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Full Address"
                 />
@@ -270,9 +310,22 @@
                   Cemetery Deed, Location, and Ownership Information
                 </label>
                 <textarea
+                  name="cemeteryInfo"
                   rows="4"
                   class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
                   placeholder="Enter cemetery information here"
+                ></textarea>
+              </div>
+
+              <div class="md:col-span-2">
+                <label class="font-heading text-lg mb-2 block text-[#1a252f]">
+                  Additional Notes
+                </label>
+                <textarea
+                  name="notes"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-md focus:border-[#d4af37] focus:outline-none"
+                  placeholder="Any additional information"
                 ></textarea>
               </div>
 
@@ -380,6 +433,18 @@
     <script>
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
+      const returnUrl = document.getElementById("returnUrl");
+      const submissionMessage = document.getElementById("submission-message");
+      const params = new URLSearchParams(window.location.search);
+
+      if (returnUrl) {
+        returnUrl.value = window.location.href.split("?")[0];
+      }
+
+      if (submissionMessage && params.get("submitted") === "true") {
+        submissionMessage.classList.remove("hidden");
+        submissionMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
 
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
